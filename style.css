@@ -54,9 +54,9 @@ button {
 .app-shell { 
   position:relative; 
   z-index:2; 
-  width:min(100%,760px); 
+  width:100%; max-width:760px; 
   margin:0 auto; 
-  padding:30px 22px 124px; 
+  padding:30px 22px 150px; 
   min-height:100svh; 
 }
 
@@ -507,12 +507,12 @@ rise {
 
 .bottom-nav { 
   position:fixed; 
-  z-index:5; 
+  z-index:20; 
   bottom:0; 
-  left:50%; 
-  transform:translateX(-50%); 
-  width:min(100%,760px); 
-  padding:10px 10px max(10px,env(safe-area-inset-bottom)); 
+  left:0; 
+  transform:none; 
+  width:100%; max-width:760px; 
+  padding:10px 6px max(12px,env(safe-area-inset-bottom)); 
   display:flex; 
   justify-content:space-around; 
   background:rgba(16,17,43,.86); 
@@ -523,14 +523,14 @@ rise {
 .nav-item { 
   border:0; 
   background:transparent; 
-  color:#a9a3bb; 
-  font-size:.62rem; 
+  color:#c0b9cf; 
+  font-size:.68rem; 
   display:flex; 
   flex-direction:column; 
   align-items:center; 
-  gap:4px; 
+  gap:5px; 
   cursor:pointer; 
-  padding:3px 5px; 
+  padding:5px 3px; 
 }
 
 .nav-item span { 
@@ -544,9 +544,9 @@ rise {
 
 .surprise-tab { 
   position:fixed; 
-  z-index:6; 
-  right:max(18px,calc((100vw - 760px)/2 + 18px)); 
-  bottom:87px; 
+  z-index:21; 
+  right:18px; 
+  bottom:96px; 
   border:1px solid var(--pink); 
   color:var(--pink); 
   background:#292248; 
@@ -623,4 +623,14 @@ rise {
 
 .video-photo:after {
   display: none;
+}
+/* Ajustes para celulares */
+.nav-item {
+  flex:1 0 20%;
+  min-width:68px;
+  white-space:nowrap;
+}
+
+.nav-item span {
+  font-size:1.25rem;
 }
