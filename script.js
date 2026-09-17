@@ -4,10 +4,19 @@ const $$ = (selector) => [...document.querySelectorAll(selector)];
 function abrirPagina(nome) {
   $$('.page').forEach((page) => page.classList.toggle('active', page.id === nome));
   $$('.nav-item').forEach((item) => item.classList.toggle('active', item.dataset.page === nome));
+  $('#main-nav').classList.remove('open');
+  $('#menu-toggle').setAttribute('aria-expanded', 'false');
+  $('#menu-toggle span').textContent = 'Menu';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 $$('[data-page]').forEach((item) => item.addEventListener('click', () => abrirPagina(item.dataset.page)));
+
+$('#menu-toggle').addEventListener('click', () => {
+  const aberto = $('#main-nav').classList.toggle('open');
+  $('#menu-toggle').setAttribute('aria-expanded', String(aberto));
+  $('#menu-toggle span').textContent = aberto ? 'Fechar' : 'Menu';
+});
 
 function atualizarContador() {
   const inicio = new Date(relacionamento.inicio);

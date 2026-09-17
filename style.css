@@ -632,3 +632,71 @@ rise {
 .nav-item span {
   font-size:1.25rem;
 }
+
+
+/* Menu recolhível para celular e telas pequenas */
+.menu-toggle {
+  position: fixed;
+  z-index: 10001;
+  right: 18px;
+  bottom: 18px;
+  border: 1px solid var(--pink);
+  border-radius: 999px;
+  background: #292248;
+  color: var(--pink);
+  padding: 12px 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0,0,0,.3);
+  font-weight: 600;
+}
+
+.menu-toggle span {
+  font-size: .75rem;
+  margin-left: 4px;
+}
+
+.bottom-nav {
+  display: none !important;
+  position: fixed !important;
+  z-index: 10000 !important;
+  left: 14px !important;
+  right: 14px !important;
+  bottom: 76px !important;
+  transform: none !important;
+  width: auto !important;
+  max-width: none !important;
+  min-height: 0;
+  padding: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(16,17,43,.98);
+  box-shadow: 0 12px 30px rgba(0,0,0,.3);
+}
+
+.bottom-nav.open {
+  display: flex !important;
+}
+
+.bottom-nav .nav-item {
+  flex: 1 0 30%;
+  min-width: 0;
+  padding: 8px 3px;
+  color: #c0b9cf;
+  font-size: .68rem;
+  white-space: nowrap;
+}
+
+.bottom-nav .nav-item span {
+  font-size: 1.25rem;
+}
+
+.bottom-nav .nav-item.active {
+  color: var(--pink);
+}
+
+.app-shell {
+  padding-bottom: 120px !important;
+}

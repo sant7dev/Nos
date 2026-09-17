@@ -102,7 +102,8 @@
       </section>
     </main>
 
-    <nav class="bottom-nav" aria-label="Navegação principal">
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰ <span>Menu</span></button>
+    <nav class="bottom-nav" id="main-nav" aria-label="Navegação principal">
       <button class="nav-item active" data-page="inicio">
         <span>🎀​</span>Início
       </button>
@@ -122,9 +123,10 @@
       <button class="nav-item" data-page="para">
         <span>​💌​</span>Para você
       </button>
+      <button class="nav-item" data-page="surpresa">
+        <span>♥</span>Surpresa
+      </button>
     </nav>
-    
-    <button class="surprise-tab" data-page="surpresa" aria-label="Abrir surpresa">♥</button>
     <script src="dados.js"></script>
     <script src="script.js"></script>
   
