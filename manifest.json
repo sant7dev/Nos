@@ -1,0 +1,21 @@
+{
+  "name": "Nós ❤️",
+  "short_name": "Nós",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#171938",
+  "theme_color": "#171938",
+  "icons": [
+    {
+      "src": "icone-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icone-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

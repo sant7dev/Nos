@@ -21,14 +21,18 @@ function atualizarContador() {
 atualizarContador();
 setInterval(atualizarContador, 60000);
 
-function imagemComFallback(src, extra = '') {
+function midia(src, extra = '') {
+  const ehVideo = /\.(mp4|webm|ogg)(\?|$)/i.test(src);
+  if (ehVideo) {
+    return `<div class="photo ${extra} video-photo"><video src="${src}" controls muted loop playsinline preload="metadata" aria-label="Vídeo nosso"></video></div>`;
+  }
   return `<div class="photo ${extra}" style="background-image:url('${src}')" role="img" aria-label="Foto nossa"></div>`;
 }
-$('#home-photos').innerHTML = fotosHome.map((foto, i) => imagemComFallback(foto, i === 0 ? 'principal' : '')).join('');
+$('#home-photos').innerHTML = fotosHome.map((foto, i) => midia(foto, i === 0 ? 'principal' : '')).join('');
 
 $('#timeline').innerHTML = momentos.map((momento) => `
   <article class="moment">
-    ${imagemComFallback(momento.imagem)}
+    ${midia(momento.video || momento.imagem)}
     <time>${momento.data}</time>
     <h3>${momento.titulo}</h3>
     <p>${momento.descricao}</p>
@@ -37,26 +41,37 @@ $('#timeline').innerHTML = momentos.map((momento) => `
 $('#love-list').innerHTML = coisasQueAmo.map((item) => `<div class="love-item">${item}</div>`).join('');
 $('#tastes-list').innerHTML = gostosDela.map((item) => `<div class="taste"><b>${item.categoria}</b><span>${item.valor}</span></div>`).join('');
 
-let perguntaAtual = 0;
-let pontos = 0;
-function mostrarPergunta() {
-  if (perguntaAtual >= perguntas.length) {
-    $('#quiz').innerHTML = `<span class="quiz-count">resultado final</span><h3>Você fez ${pontos} de ${perguntas.length} pontos.</h3><p class="feedback">Mas a verdade é que você sempre acerta meu coração ❤️</p><button class="next-button" id="restart">Jogar novamente</button>`;
-    $('#restart').addEventListener('click', () => { perguntaAtual = 0; pontos = 0; mostrarPergunta(); });
-    return;
-  }
-  const atual = perguntas[perguntaAtual];
-  $('#quiz').innerHTML = `<span class="quiz-count">pergunta ${perguntaAtual + 1} de ${perguntas.length}</span><h3>${atual.pergunta}</h3><div class="answers">${atual.alternativas.map((a, i) => `<button class="answer" data-answer="${i}">${a}</button>`).join('')}</div><div id="quiz-feedback"></div>`;
-  $$('.answer').forEach((button) => button.addEventListener('click', () => responder(Number(button.dataset.answer), atual)));
+function iniciarMemoria() {
+  const cartas = [...fotosMemoria, ...fotosMemoria]
+    .map((imagem, indice) => ({ imagem, par: indice % fotosMemoria.length }))
+    .sort(() => Math.random() - 0.5);
+  let primeira = null;
+  let bloqueado = false;
+  let pares = 0;
+  let jogadas = 0;
+  const area = $('#memory-game');
+
+  area.innerHTML = `<div class="memory-status"><span>Pares: <strong id="memory-pairs">0/${fotosMemoria.length}</strong></span><span>Tentativas: <strong id="memory-moves">0</strong></span></div><div class="memory-grid">${cartas.map((carta, indice) => `<button class="memory-card-button" data-index="${indice}" data-pair="${carta.par}" aria-label="Carta de memória"><span class="memory-card-inner"><span class="memory-face memory-front">♥</span><span class="memory-face memory-back"><img src="${carta.imagem}" alt="Foto nossa"></span></span></button>`).join('')}</div>`;
+
+  $$('.memory-card-button').forEach((carta) => carta.addEventListener('click', () => {
+    if (bloqueado || carta.classList.contains('flipped') || carta.classList.contains('matched')) return;
+    carta.classList.add('flipped');
+    if (!primeira) { primeira = carta; return; }
+    jogadas++;
+    $('#memory-moves').textContent = jogadas;
+    const segunda = carta;
+    if (primeira.dataset.pair === segunda.dataset.pair) {
+      primeira.classList.add('matched'); segunda.classList.add('matched'); pares++;
+      $('#memory-pairs').textContent = `${pares}/${fotosMemoria.length}`;
+      primeira = null;
+      if (pares === fotosMemoria.length) setTimeout(() => { area.insertAdjacentHTML('beforeend', '<p class="feedback">Você encontrou todas as nossas memórias ❤️</p><button class="memory-restart">Jogar novamente</button>'); $('.memory-restart').addEventListener('click', iniciarMemoria); }, 350);
+    } else {
+      bloqueado = true;
+      setTimeout(() => { primeira.classList.remove('flipped'); segunda.classList.remove('flipped'); primeira = null; bloqueado = false; }, 850);
+    }
+  }));
 }
-function responder(escolha, atual) {
-  $$('.answer').forEach((button) => { button.disabled = true; if (Number(button.dataset.answer) === atual.correta) button.classList.add('selected'); });
-  const acertou = escolha === atual.correta;
-  if (acertou) pontos++;
-  $('#quiz-feedback').innerHTML = `<p class="feedback">${acertou ? 'Acertou! ' : 'Quase! '}${atual.feedback}</p><button class="next-button" id="next">${perguntaAtual === perguntas.length - 1 ? 'Ver resultado' : 'Próxima'}</button>`;
-  $('#next').addEventListener('click', () => { perguntaAtual++; mostrarPergunta(); });
-}
-mostrarPergunta();
+iniciarMemoria();
 
 $('#months').innerHTML = textosMensais.map((item, index) => `<button class="month" data-month="${index}">${item.mes}</button>`).join('');
 $$('.month').forEach((button) => button.addEventListener('click', () => {
@@ -71,3 +86,9 @@ $('#open-surprise').addEventListener('click', () => {
   $('#open-surprise').textContent = 'Aberta ♥';
   $('#open-surprise').disabled = true;
 });
+
+const playlistLink = $('#playlist-link' );
+
+playlistLink.href = playlist.link;
+$('#playlist-title').textContent = playlist.titulo;
+$('#playlist-description').textContent = playlist.descricao;
