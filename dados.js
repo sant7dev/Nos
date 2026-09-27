@@ -128,6 +128,26 @@ const fotosHome = [
   "assets/fotos/32.jpeg", //41
   "assets/fotos/33.jpeg", //42
   "assets/fotos/34.jpeg", //43
+  "assets/fotos/35.jpeg", //44
+  "assets/fotos/36.jpeg", //45
+  "assets/fotos/37.jpeg", //46
+  "assets/videos/10.mp4", //47
+  "assets/fotos/38.jpeg", //48
+  "assets/fotos/39.jpeg", //49
+  "assets/fotos/40.jpeg", //50
+  "assets/fotos/41.jpeg", //51
+  "assets/videos/11.mp4", //52
+  "assents/videos/12.mp4", //53
+  "assets/fotos/42.jpeg", //54
+  "assets/fotos/43.jpeg", //55
+  "assets/fotos/44.jpeg", //56
+  "assets/videos/13.mp4", //57
+  "assets/fotos/45.jpeg", //58
+  "assets/fotos/46.jpeg", //59
+  "assets/fotos/47.jpeg", //60
+  "assets/fotos/48.jpeg", //61
+  "assets/fotos/49.jpeg", //62
+  "assets/fotos/50.jpeg", //63
 ];
 
 const playlist = {
