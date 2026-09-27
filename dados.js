@@ -133,5 +133,5 @@ const fotosHome = [
 const playlist = {
   titulo: "Nossa playlist ❤️🎶​",
   descricao: "Músicas que lembram você",
-  link: "https://open.spotify.com/playlist/37i9dQZF1EJHVcHyPULJly"
+  link: "https://open.spotify.com/playlist/1vIGMMcLB4Nc7AiIvIl0In?si=446a705738e74ca2"
 };
