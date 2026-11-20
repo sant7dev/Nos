@@ -183,8 +183,8 @@ rise {
   content:'♥'; 
   position:absolute; 
   right:12px; 
-  bottom:9px; 
-  color:rgba(255,255,255,.7); 
+  bottom:12px; 
+  color:rgba(255, 0, 200, 0.7); 
 }
 
 .photo:first-child { 
@@ -243,15 +243,15 @@ rise {
   width:8px; 
   height:8px; 
   border-radius:50%; 
-  background:var(--pink); 
-  box-shadow:0 0 0 5px rgba(255,157,189,.17); 
+  background:var(rgb(252, 0, 252)); 
+  box-shadow:0 0 0 5px rgba(255, 0, 234, 0.17); 
   position:absolute; 
   left:-2px; 
   top:5px; 
 }
 
 .moment .photo { 
-  height:190px; margin-bottom:14px; 
+  height:19px; margin-bottom:14px; 
 }
 
 .moment time { 
@@ -275,7 +275,7 @@ rise {
 
 
 .memory-card { 
-  padding:20px; 
+  padding:200px; 
 }
 
 .memory-status { 
