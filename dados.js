@@ -76,12 +76,13 @@ const textosMensais = [
   { mes: "1.0", texto: "Um ano. 12 meses desde que começamos essa história e já temos tantas lembranças q parecem caber em uma vida inteira. Um ano ao lado da pessoa q tornou meus dias muito mais especiais." },
   { mes: "1.1", texto: "Depois de um ano, veio mais uma coisa q eu gosto na nossa história: perceber q ainda temos muito para viver. O nosso primeiro ano não foi um ponto final, foi só mais uma parte de tudo q ainda vamos construir." },
   { mes: "1.2", texto: "Quatorze meses e ainda existem tantos lugares para conhecer, coisas para fazer e histórias para criar. Eu gosto de pensar q, enquanto estivermos juntos, sempre teremos um novo capítulo para viver." },
-  { mes: "1.3", texto: "Um ano e três meses de nós. 15 meses de uma história que continua acontecendo, crescendo e ganhando novos significados. E se tem uma coisa q eu quero, é continuar colecionando meses, momentos e memórias ao seu lado."}
+  { mes: "1.3", texto: "Um ano e três meses de nós. 15 meses de uma história que continua acontecendo, crescendo e ganhando novos significados. E se tem uma coisa q eu quero, é continuar colecionando meses, momentos e memórias ao seu lado."},
+  { mes: "1.4", texto: "sd"}
 ];
 
 const surpresa = {
   titulo: "Você é meu presente favorito",
-  texto: "Se você chegou até aqui, significa que percorreu cada pedacinho dessa história comigo. Passou pelas nossas lembranças, pelos momentos engraçados, pelas perguntas, pelas pequenas memórias e por tudo aquilo que construímos juntos ao longo desse tempo.E talvez essa seja a coisa mais bonita sobre nós: perceber que nossa história não é feita apenas dos grandes momentos, mas também das coisas simples. Das conversas sem sentido que viram lembranças especiais, dos abraços que parecem fazer o mundo ficar mais leve, das risadas, das saudades, dos planos, das pequenas manias que aprendemos um sobre o outro e de todos aqueles detalhes que, para qualquer outra pessoa, poderiam parecer comuns, mas para nós têm um significado enorme. Quando você entrou na minha vida, eu não imaginava quantas coisas mudariam. Aos poucos, você se tornou parte dos meus dias, dos meus pensamentos, das minhas melhores lembranças e também dos meus sonhos para o futuro. E é estranho pensar que, em algum momento, nós éramos apenas duas pessoas vivendo nossas vidas separadamente, porque hoje parece que muitas das minhas melhores partes têm você nelas. Obrigado por cada conversa, por cada sorriso, por cada momento em que você esteve ao meu lado, pelos dias fáceis e pelos dias difíceis também. Obrigado por me permitir conhecer a pessoa incrível que você é, pelos seus jeitos, pelas suas manias, pelo seu carinho e por todas as coisas que fazem você ser exatamente você. Sei que ainda temos muito para viver, muitos lugares para conhecer, muitas fotos para tirar, muitas risadas para dar e muitas memórias para criar. E essa é uma das coisas que mais gosto na nossa história: ela não é algo que ficou no passado, ela continua acontecendo todos os dias. Cada novo momento, por mais simples que seja, se torna mais um pedacinho do nosso caminho juntos. Quero que você saiba que, independentemente do tempo que passe, uma coisa continua sendo verdade: eu gosto de ter você na minha vida. Gosto das nossas conversas, das nossas brincadeiras, dos nossos momentos simples e da sensação de que, quando estamos juntos, tudo parece um pouco melhor. E se esse aplicativo tem uma mensagem principal, talvez seja essa: obrigado por fazer parte da minha história e por me permitir fazer parte da sua. Desculpa pelas vezes em que errei com você, pelas vezes em que não soube agir da melhor forma, pelas palavras que talvez tenham te machucado e por aqueles momentos em que poderia ter sido mais paciente, mais compreensivo ou simplesmente ter te ouvido melhor. Eu te amo muito e quero continuar escrevendo historias com você ❤️❤️ "
+  texto: "Se você chegou até aqui, significa que percorreu cada pedacinho dessa história comigo. Passou pelas nossas lembranças, pelos momentos engraçados, pelas perguntas, pelas pequenas memórias e por tudo aquilo que construímos juntos ao longo desse tempo.E talvez essa seja a coisa mais bonita sobre nós: perceber que nossa história não é feita apenas dos grandes momentos, mas também das coisas simples. Das conversas sem sentido que viram lembranças especiais, dos abraços que parecem fazer o mundo ficar mais leve, das risadas, das saudades, dos planos, das pequenas manias que aprendemos um sobre o outro e de todos aqueles detalhes que, para qualquer outra pessoa, poderiam parecer comuns, mas para nós têm um significado enorme. Quando você entrou na minha vida, eu não imaginava quantas coisas mudariam. Aos poucos, você se tornou parte dos meus dias, dos meus pensamentos, das minhas melhores lembranças e também dos meus sonhos para o futuro. E é estranho pensar que, em algum momento, nós éramos apenas duas pessoas vivendo nossas vidas separadamente, porque hoje parece que muitas das minhas melhores partes têm você nelas. Obrigado por cada conversa, por cada sorriso, por cada momento em que você esteve ao meu lado, pelos dias fáceis e pelos dias difíceis também. Obrigado por me permitir conhecer a pessoa incrível que você é, pelos seus jeitos, pelas suas manias, pelo seu carinho e por todas as coisas que fazem você ser exatamente você. Sei que ainda temos muito para viver, muitos lugares para conhecer, muitas fotos para tirar, muitas risadas para dar e muitas memórias para criar. E essa é uma das coisas que mais gosto na nossa história: ela não é algo que ficou no passado, ela continua acontecendo todos os dias. Cada novo momento, por mais simples que seja, se torna mais um pedacinho do nosso caminho juntos. Quero que você saiba que, independentemente do tempo que passe, uma coisa continua sendo verdade: eu gosto de ter você na minha vida. Gosto das nossas conversas, das nossas brincadeiras, dos nossos momentos simples e da sensação de que, quando estamos juntos, tudo parece um pouco melhor. E se esse aplicativo tem uma mensagem principal, talvez seja essa: obrigado por fazer parte da minha história e por me permitir fazer parte da sua. Desculpa pelas vezes em que errei com você, pelas vezes em que não soube agir da melhor forma, pelas palavras que talvez tenham te machucado e por aqueles momentos em que poderia ter sido mais paciente, mais compreensivo ou simplesmente ter te ouvido melhor. Eu te amo muito e quero continuar escrevendo historias com você ❤️❤️"
 };
 
 const fotosHome = [
@@ -137,7 +138,7 @@ const fotosHome = [
   "assets/fotos/40.jpeg", //50
   "assets/fotos/41.jpeg", //51
   "assets/videos/11.mp4", //52
-  "assents/videos/12.mp4", //53
+  "assets/videos/12.mp4", //53
   "assets/fotos/42.jpeg", //54
   "assets/fotos/43.jpeg", //55
   "assets/fotos/44.jpeg", //56
@@ -148,6 +149,26 @@ const fotosHome = [
   "assets/fotos/48.jpeg", //61
   "assets/fotos/49.jpeg", //62
   "assets/fotos/50.jpeg", //63
+  "assets/fotos/51.jpeg", //51
+  "assets/fotos/52.jpeg", //52
+  "assets/fotos/53.jpeg", //53
+  "assets/fotos/54.jpeg", //54
+  "assets/fotos/55.jpeg", //55
+  "assets/fotos/56.jpeg", //56
+  "assets/fotos/57.jpeg", //57
+  "assets/fotos/58.jpeg", //58
+  "assets/fotos/59.jpeg", //59
+  "assets/fotos/60.jpeg", //60
+  "assets/fotos/61.jpeg", //61
+  "assets/fotos/62.jpeg", //62
+  "assets/fotos/63.jpeg", //63
+  "assets/fotos/64.jpeg", //64
+  "assets/fotos/65.jpeg", //65
+  "assets/fotos/66.jpeg", //66
+  "assets/fotos/67.jpeg", //67
+  "assets/fotos/68.jpeg", //68
+  "assets/fotos/69.jpeg", //69
+  "assets/fotos/70.jpeg", //70
 ];
 
 const playlist = {
