@@ -77,7 +77,8 @@ const textosMensais = [
   { mes: "1.1", texto: "Depois de um ano, veio mais uma coisa q eu gosto na nossa história: perceber q ainda temos muito para viver. O nosso primeiro ano não foi um ponto final, foi só mais uma parte de tudo q ainda vamos construir." },
   { mes: "1.2", texto: "Quatorze meses e ainda existem tantos lugares para conhecer, coisas para fazer e histórias para criar. Eu gosto de pensar q, enquanto estivermos juntos, sempre teremos um novo capítulo para viver." },
   { mes: "1.3", texto: "Um ano e três meses de nós. 15 meses de uma história que continua acontecendo, crescendo e ganhando novos significados. E se tem uma coisa q eu quero, é continuar colecionando meses, momentos e memórias ao seu lado."},
-  { mes: "1.4", texto: "sd"}
+  { mes: "1.4", texto: "É mor um ano e quatro meses, e ate pra manifestação do lulinha a gente foi kkkkkkk A gente se desentende, se resolve, vai pra rua junto.... faz tudo junto, é parceria em tudo. Eu te amooo namorida.. A gente foi até pra manifestação pro Lula juntos, quem diria kkkkkkk. A gente briga, se resolve, vai pra rua junto, é parceria em tudo. Eu te amoo, namorida, minha gatinha chata que eu amo."},
+  { mes: "1.5", texto: "Um ano e cinco meses mor. A gente foi no circo, na festa de halloween, e eu só queria ficar grudado em você o tempo todo. Alem disso, teve o que vc mais gosta  O BOLINHO e FRANGUINHO que você ama kkkkkk. Eu te amoo muitooo, minha princesa."}
 ];
 
 const surpresa = {
